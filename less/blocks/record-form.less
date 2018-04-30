@@ -1,0 +1,329 @@
+@import "page-title.less";
+.record-form {
+  background-color: #f8f5f2;
+}
+
+.record-form__wrapper {
+  .container-fluid();
+  padding: 33px 20px;
+  padding-bottom: 75px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.record-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 1px solid #e5ddd5;
+}
+
+.record-form input::-moz-placeholder {
+  .placeholder();
+}
+
+.record-form input::-webkit-input-placeholder {
+  .placeholder();
+}
+
+.record-form input:-ms-input-placeholder{
+  .placeholder();
+  line-height: 18px;
+}
+
+.record-form input[name="second name"],
+.record-form input[name="email"] {
+  margin-bottom: 32px;
+}
+
+.record-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 40px;
+  outline: none;
+  -moz-appearance: none;
+  min-height: 20px;
+  border: 1px solid #e5ddd5;
+  font-family: "PT Sans Narrow";
+  font-size: 18px;
+  line-height: 30px;
+  resize: none;
+}
+
+.record-form input:hover,
+.record-form textarea:hover {
+  border: 1px solid #d5c9bd;
+}
+
+.record-form__information {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.record-form__information h2 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow";
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.record-form__information input[type="radio"],
+.record-form__information input[type="checkbox"] {
+  display: none;
+}
+
+.record-form__beard-type {
+  width: 33.3%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.record-form__beard-type:nth-of-type(n+4) {
+  margin-bottom: 50px;
+}
+
+.record-form__information p {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: "PT Sans Narrow";
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.record-form__information label {
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border: none;
+    transform-origin: 50% 50%;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.record-form__information input:checked ~ label::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+}
+
+.record-form__information input[name="beard-type"]:checked ~ label::before {
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+}
+
+.record-form__information label:hover {
+  border-color: #d5c9bd;
+}
+
+.record-form__information input[name="beard-type"]:checked + label:hover::before {
+  border-color: #d5c9bd;
+}
+
+.record-form__beard-type img {
+  display: block;
+}
+
+.record-form__aditional-services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.record-form__aditional-service {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.record-form__aditional-service label {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 0px;
+  border-radius: 0;
+}
+
+.record-form__aditional-service p {
+  width: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 23px;
+}
+
+.record-form__aditional-service input:checked ~ label::before {
+  margin-left: -11px;
+  margin-top: -8px;
+  background: url(../img/input-check.svg) no-repeat center;
+  width: 22px;
+  height: 16px;
+}
+
+.record-form__aditional-service label:hover::before {
+  border-color: #d5c9bd;
+}
+
+.record-form__information button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 0;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  font-family: "PT Sans Narrow Bold";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #826550;
+  cursor: pointer;
+}
+
+.record-form__information button:hover {
+  background-color: #6a4d38;
+}
+
+@media (min-width:768px) {
+  .record-form__wrapper {
+    padding: 63px 0;
+    padding-bottom: 77px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .record-form input {
+    margin-bottom: 35px;
+  }
+  .record-form input[type="text"] {
+    box-sizing: border-box;
+    width: 33.3%;
+    margin-bottom: 35px;
+    border-right: none;
+  }
+  .record-form input[name="second name"] {
+    border-right: 1px solid #e5ddd5;
+  }
+  .record-form input[name="name"] {
+    order: -1;
+  }
+  .record-form textarea {
+    min-height: 206px;
+    margin-bottom: 55px;
+  }
+  .record-form__information h2 {
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .record-form__information h2::before,
+  .record-form__information h2::after {
+    content: "";
+    position: absolute;
+    width: 21%;
+    left: 0;
+    top: 14px;
+    border: 1px solid #e5ddd5;
+  }
+  .record-form__information h2::after {
+    right: 0;
+    left: auto;
+  }
+  .record-form__information h2:last-of-type {
+    margin-bottom: 70px;
+  }
+  .record-form__beard-type {
+    width: 20%;
+    margin-bottom: 60px;
+  }
+  .record-form__beard-type:nth-of-type(n+4) {
+    margin-bottom: 60px;
+  }
+  .record-form__information p {
+    font-size: 24px;
+  }
+  .record-form__aditional-service {
+    width: 50%;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+  .record-form__aditional-service:nth-of-type(2n) {
+    order: 2;
+  }
+  .record-form__aditional-service label {
+    margin-bottom: 0;
+  }
+  .record-form__information button {
+    margin-top: 40px;
+    padding: 20px 0;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width:1200px) {
+  .record-form__wrapper {
+    padding: 63px 0;
+    padding-bottom: 88px;
+  }
+  .record-form__information {
+    justify-content: space-between;
+  }
+  .record-form input[type="text"] {
+    box-sizing: border-box;
+    width: 295px;
+    margin-bottom: 35px;
+    border-right: 1px solid #e5ddd5;
+  }
+  .record-form input[name="second name"] {
+    border-right: 1px solid #e5ddd5;
+    margin-right: 0;
+  }
+  .record-form input[name="phone"],
+  .record-form input[name="email"] {
+    width: 462px;
+  }
+  .record-form__aditional-service {
+    width: 33.3%;
+  }
+}

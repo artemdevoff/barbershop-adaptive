@@ -1,0 +1,142 @@
+.pricelist {
+  background-color: #353535;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.pricelist__wrapper {
+  .container-fluid();
+  padding: 37px 20px;
+  padding-bottom: 53px;
+}
+
+.pricelist__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "PT Sans Narrow Bold";
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.pricelist__cell:first-child {
+  display: none;
+}
+
+.pricelist__table {
+  display: block;
+  width: 100%;
+}
+
+.pricelist__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.pricelist__row:last-of-type {
+  margin-bottom: 15px;
+}
+
+.pricelist__cell {
+  display: block;
+}
+
+.pricelist__cell:nth-child(2) {
+  width: 65%;
+  font-family: "PT Sans Narrow Bold";
+  font-weight: normal;
+}
+
+.pricelist__cell:nth-child(3) {
+  order: 1;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.pricelist__cell:nth-child(4) {
+  width: 35%;
+  text-align: right;
+}
+
+@import "discount-time.less";
+@media(min-width:768px) {
+  .pricelist__wrapper {
+    padding: 40px 0;
+    padding-bottom: 55px;
+  }
+  .pricelist__title {
+    margin-bottom: 53px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+  }
+  .pricelist__table {
+    display: table;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 9px;
+    border-collapse: collapse;
+    border: none;
+  }
+  .pricelist__row {
+    display: table-row;
+  }
+  .pricelist__row:last-of-type {
+    margin-bottom: 0;
+  }
+  .pricelist__row:first-child {
+    border-top: 1px solid #4a4a4a;
+  }
+  .pricelist__cell {
+    display: table-cell;
+    border: 1px solid #4a4a4a;
+    border-top: none;
+    padding: 14px 0;
+    padding-right: 0;
+    text-align: left;
+  }
+  .pricelist__cell:first-child {
+    display: table-cell;
+    width: 11%;
+    text-align: center;
+    opacity: 0.3;
+  }
+  .pricelist__cell:nth-child(2) {
+    width: 39%;
+    padding-left: 20px;
+    text-align: left;
+  }
+  .pricelist__cell:nth-child(n+3) {
+    width: 25%;
+    padding-left: 20px;
+    margin: 0;
+    text-align: left;
+    box-sizing: content-box;
+  }
+  .pricelist__cell span {
+    display: none;
+  }
+}
+
+@media (min-width:1200px) {
+  .pricelist__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 0;
+  }
+  .pricelist__title {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .pricelist__table {
+    width: 630px;
+    margin-bottom: 0;
+  }
+}

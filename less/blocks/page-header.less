@@ -1,0 +1,63 @@
+.page-header__back {
+  height: 85px;
+  text-align: center;
+  background-color: #242424;
+}
+
+.page-header__logo {
+  width: 230px;
+  height: 85px;
+}
+
+@media (min-width:768px) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+  }
+  .page-header__back {
+    order: 2;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/back-tablet.jpg.jpg);
+    background-repeat: no-repeat;
+    background-position: center -49px;
+    background-size: cover;
+  }
+  .page-header__logo {
+    position: absolute;
+    bottom: 247px;
+    left: 50%;
+    width: 370px;
+    height: auto;
+    transform: translateX(-50%);
+  }
+  .page-header__back--inner {
+    height: 215px;
+    background-image: url(../img/page-header-tablet-inner.jpg);
+    background-position: center -70px;
+  }
+  .page-header__logo--inner {
+    bottom: 74px;
+  }
+}
+
+@media (min-width:1200px) {
+  .page-header__back {
+    height: 648px;
+    background-image: url(../img/back-desktop.jpg.jpg);
+    background-position: center -67px;
+    background-size: cover;
+  }
+  .page-header__logo {
+    bottom: 438px;
+  }
+  .page-header__back--inner {
+    height: 315px;
+    background-image: url(../img/page-header-desktop-inner.jpg);
+  }
+  .page-header__logo--inner {
+    bottom: 101px;
+  }
+}
